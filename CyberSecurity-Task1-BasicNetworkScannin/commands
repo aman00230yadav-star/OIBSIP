@@ -1,0 +1,17 @@
+Commands Used
+
+Verify Nmap Installation
+
+nmap --version
+
+Basic Port Scan
+
+nmap 127.0.0.1
+
+Service and Version Detection
+
+nmap -sV 127.0.0.1
+
+Save Results to a File
+
+nmap -sV 127.0.0.1 -oN nmap_scan_results.txt
