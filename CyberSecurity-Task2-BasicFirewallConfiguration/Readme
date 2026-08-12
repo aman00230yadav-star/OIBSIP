@@ -1,0 +1,101 @@
+# Basic Firewall Configuration Using UFW
+
+## Objective
+
+The objective of this task is to configure a basic firewall on an Ubuntu Linux system using UFW (Uncomplicated Firewall).
+
+The firewall is configured to:
+
+- Allow SSH traffic on TCP port 22
+- Deny HTTP traffic on TCP port 80
+- Enable the UFW firewall
+- Verify the configured firewall rules
+
+## Tool Used
+
+- UFW (Uncomplicated Firewall)
+- Ubuntu Linux
+
+## Configuration Commands
+
+### Install UFW
+
+```bash
+sudo apt update
+sudo apt install ufw -y
+```
+
+### Allow SSH
+
+```bash
+sudo ufw allow 22/tcp
+```
+
+SSH is allowed so that remote administration through SSH remains possible.
+
+### Deny HTTP
+
+```bash
+sudo ufw deny 80/tcp
+```
+
+HTTP traffic uses TCP port 80 by default. The rule prevents incoming HTTP connections.
+
+### Enable Firewall
+
+```bash
+sudo ufw --force enable
+```
+
+### Check Firewall Status
+
+```bash
+sudo ufw status verbose
+```
+
+## Expected Configuration
+
+The final firewall configuration should contain rules similar to:
+
+```text
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere
+80/tcp                     DENY        Anywhere
+```
+
+The exact output may vary depending on the Ubuntu version and existing firewall configuration.
+
+## Security Significance
+
+### SSH - Port 22
+
+SSH is commonly used for secure remote administration of Linux systems.
+
+Allowing port 22 enables authorized users to connect to the system remotely. SSH should be protected using strong authentication and should not be unnecessarily exposed to untrusted networks.
+
+### HTTP - Port 80
+
+HTTP is commonly used for web servers.
+
+Denying port 80 prevents incoming HTTP connections and reduces exposure if the system does not need to provide an HTTP service.
+
+An open port is not automatically a vulnerability. Firewall rules should be based on the services that are actually required by the system.
+
+## Verification
+
+The firewall configuration was verified using:
+
+```bash
+sudo ufw status verbose
+```
+
+The screenshot of the active firewall and its rules is included in the `screenshots` directory.
+
+## Conclusion
+
+UFW was successfully configured on the Ubuntu system. SSH traffic was allowed for remote administration, while incoming HTTP traffic on port 80 was denied.
+
+This task demonstrated the basic use of host-based firewall rules to control network access and reduce unnecessary network exposure.
