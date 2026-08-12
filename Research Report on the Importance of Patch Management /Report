@@ -1,0 +1,44 @@
+🛡️ Task 6: Research Report on the Importance of Patch Management
+
+Part of the Oasis Infobyte Cybersecurity Internship (OIBSIP) — Task 6
+
+📌 Objective
+
+Research and write a report explaining the significance of patch management in cybersecurity — covering its role in system security, the consequences of neglecting patches, and best practices for building an effective patch management strategy.
+
+
+The report covers:
+
+What patch management is — the identify → assess → test → deploy → verify cycle
+Why it matters — closing known vulnerabilities, reducing attack surface, compliance, and business trust
+Real-world consequences of skipping patches — case studies including:
+🔴 WannaCry Ransomware (2017)
+🔴 Equifax Breach (2017)
+🔴 Log4Shell (2021)
+Best practices — asset inventory, prioritization frameworks, automation, staged testing, SLAs, and continuous monitoring
+
+👉 Read the full report here: patch_management_report.md
+
+🔗 References
+
+This report cites primary and official sources, including:
+
+NIST SP 800-40 Rev. 4 — Guide to Enterprise Patch Management Planning
+CISA — WannaCry Ransomware Indicators
+CISA — StopRansomware Advisories
+Apache Software Foundation — Statement on the Equifax Breach
+U.S. House Oversight Committee — Equifax Data Breach Report
+NVD — CVE-2017-5638
+Apache Log4j Security Vulnerabilities
+CISA — Log4j Vulnerability Guidance
+OWASP — Vulnerability Management Guide
+
+(Full citation list also included at the end of the report itself.)
+
+🎥 Demo Video
+
+Not required for this task.
+
+👤 Author
+
+Rohit Yadav B.Tech CSE Student | Cybersecurity Intern @ Oasis Infobyte
